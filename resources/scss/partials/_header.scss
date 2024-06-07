@@ -1,28 +1,24 @@
 @use "../mixins/mixins.scss" as *;
 header{
-    @include flex(row, space-between, center);
     background-color: #ff6900;
     padding: 15px 0;
     color: #ffffff;
-    ul{
-        display: flex;
-        gap: 15px;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    ul:first-child {
-        margin-left: 20px; 
-    }
-    ul:last-child {
-        margin-right: 20px; 
-    }
+    .container{
+        @include flex(row, space-between, center);
+        @include container(1180px);
+        ul{
+            display: flex;
+            gap: 15px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    .logo{
-        max-height: 40px;
-        img{
-            max-width: 100%;
+        .logo{
+            max-height: 40px;
+            img{
+                max-width: 100%;
+            }
         }
     }
 }
