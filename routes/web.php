@@ -18,9 +18,8 @@ Route::get('/', function () {
 })->name("home");
 
 Route::get('/shop', function () {
-    $data = [
-        $products = config('products.products')
-    ];
+    $products = config('products.products');
+    
     // dd($data);
-    return view('products');
+    return view('products', compact('products'));
 })->name("products");

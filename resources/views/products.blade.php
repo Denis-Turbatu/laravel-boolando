@@ -2,5 +2,11 @@
 
 @section('content')
     <h1>Prodotti</h1>
-    
+    <div class="row">
+        @foreach ($products as $item)
+            <div class="col-6 col-md-4 ">
+                @include('./partials/card_product')
+            </div>
+        @endforeach
+    </div>
 @endsection
