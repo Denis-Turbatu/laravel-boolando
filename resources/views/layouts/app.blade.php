@@ -10,11 +10,14 @@
   <!-- Includiamo gli assets con la direttiva vite -->
   @vite('resources/js/app.js')
 </head>
+@include('./partials/header')
 
 <body>
   <main>
     @yield('content')
   </main>
+
+@include('./partials/footer')
 
 </body>
 

@@ -3,6 +3,7 @@ header{
     @include flex(row, space-between, center);
     background-color: #ff6900;
     padding: 15px 0;
+    color: #ffffff;
     ul{
         display: flex;
         gap: 15px;
@@ -19,7 +20,7 @@ header{
     }
 
     .logo{
-        max-height: 70px;
+        max-height: 40px;
         img{
             max-width: 100%;
         }
