@@ -15,4 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name("home");
+
+Route::get('/shop', function () {
+    $data = [
+        $products = config('products.products')
+    ];
+    // dd($data);
+    return view('products');
+})->name("products");
