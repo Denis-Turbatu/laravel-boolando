@@ -1,0 +1,27 @@
+@use "../mixins/mixins.scss" as *;
+header{
+    @include flex(row, space-between, center);
+    background-color: #ff6900;
+    padding: 15px 0;
+    ul{
+        display: flex;
+        gap: 15px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul:first-child {
+        margin-left: 20px; 
+    }
+    ul:last-child {
+        margin-right: 20px; 
+    }
+
+    .logo{
+        max-height: 70px;
+        img{
+            max-width: 100%;
+        }
+    }
+}
