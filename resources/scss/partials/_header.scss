@@ -12,6 +12,12 @@ header{
             list-style-type: none;
             padding: 0;
             margin: 0;
+            li{
+                a{
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+            }
         }
 
         .logo{

@@ -16,7 +16,7 @@ return [
         ],
         [
           "type" => "discount",
-          "value" => "-50%"
+          "value" => 50
         ]
       ]
     ],
@@ -31,7 +31,7 @@ return [
       "badges" => [
         [
           "type" => "discount",
-          "value" => "-30%"
+          "value" => 30
         ]
       ]
     ],
@@ -46,7 +46,7 @@ return [
       "badges" => [
         [
           "type" => "discount",
-          "value" => "-30%"
+          "value" => 30
         ]
       ]
     ],
@@ -65,7 +65,7 @@ return [
         ],
         [
           "type" => "discount",
-          "value" => "-50%"
+          "value" => 50
         ]
       ]
     ],
@@ -84,7 +84,7 @@ return [
         ],
         [
           "type" => "discount",
-          "value" => "-50%"
+          "value" => 50
         ]
       ]
     ],
