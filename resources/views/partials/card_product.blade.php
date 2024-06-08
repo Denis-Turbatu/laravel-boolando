@@ -8,7 +8,7 @@
       @foreach ($item['badges'] as $badge)
         @if ($badge['type'] === 'discount')
           <span class="card-text my-0 text-decoration-line-through">{{ $item['price'] }}</span>
-          <span class="card-text my-0 text-danger">{{ $item['price'] }} - {{ $badge['value'] }}% sconto</span>
+          <span class="card-text my-0 text-danger">{{ number_format($item['price'] - round($item['price'] * $badge['value'] / 100, 2), 2) }}</span>
           @break
         @endif
       @endforeach
