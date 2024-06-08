@@ -3,14 +3,17 @@
     <div class="card-body">
         <h5 class="card-text fw-semibold my-0">{{ $item['brand'] }}</h5>
         <p class="card-text my-0">{{ $item['name'] }}</p>
-        <p class="card-text my-0">{{ $item['price'] }}
-        @if (isset($item['badges']))
-            @foreach ($item['badges'] as $badge)
-                @if ($badge['type'] === 'discount')
-                    - {{ $badge['value'] }}% sconto</p>
-                @break
-            @endif
-        @endforeach
+
+    @if (isset($item['badges']))
+      @foreach ($item['badges'] as $badge)
+        @if ($badge['type'] === 'discount')
+          <span class="card-text my-0 text-decoration-line-through">{{ $item['price'] }}</span>
+          <span class="card-text my-0 text-danger">{{ $item['price'] }} - {{ $badge['value'] }}% sconto</span>
+          @break
+        @endif
+      @endforeach
+      @if (!isset($badge) || $badge['type'] !== 'discount')  <span class="card-text my-0 text-danger">{{ $item['price'] }}</span>
+      @endif
     @endif
 </div>
 </div>
