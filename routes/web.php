@@ -19,7 +19,11 @@ Route::get('/', function () {
 
 Route::get('/shop', function () {
     $products = config('products.products');
+
+    $data = [
+        'products' => $products,
+    ];
     
     // dd($data);
-    return view('products', compact('products'));
+    return view('products', $data);
 })->name("products");
