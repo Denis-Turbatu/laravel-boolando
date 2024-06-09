@@ -6,6 +6,7 @@
         {{-- IMMAGINE DIETRO --}}
         <img src="{{ Vite::asset('resources/img/' . $item['backImage']) }}"
             class="card-img-top ms-retro-img position-absolute top-0 start-0 " alt="{{ $item['name'] }}">
+        {{-- TAG --}}
         <div class="ms-tag-container">
             {{-- CONTROLLO ESISTENZA BADGES NELL'ARTICOLO --}}
             @if (isset($item['badges']))
@@ -19,6 +20,10 @@
                     @endif
                 @endforeach
             @endif
+        </div>
+        {{-- BOTTONE 'MI PIACE' --}}
+        <div class="fs-1 ms-like-btn">
+          &#9829;
         </div>
     </div>
     <div class="card-body">
